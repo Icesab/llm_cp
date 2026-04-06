@@ -1,4 +1,4 @@
-# ConformalLLM
+# LLM_cp
 ## Extending Conformal Prediction to LLMs 
 Read our paper here [Conformal Prediction with Large Language Models for Multi-Choice Question Answering
 ](https://arxiv.org/abs/2305.18404)
