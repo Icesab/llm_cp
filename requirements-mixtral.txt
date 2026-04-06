@@ -1,0 +1,9 @@
+transformers>=4.45,<4.48
+accelerate>=0.34,<0.35
+bitsandbytes>=0.43,<0.46
+datasets>=2.20,<3.0
+sentencepiece>=0.2,<0.3
+numpy>=1.26,<2
+matplotlib>=3.8,<3.10
+tqdm>=4.66,<5
+jupyter>=1.0,<2
