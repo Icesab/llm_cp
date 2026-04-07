@@ -1,9 +1,0 @@
-subject_id,subject_name,mean,std,num_trials
-computer_security,computer security,4.0,0.0,5
-high_school_computer_science,high school computer science,4.0,0.0,5
-college_computer_science,college computer science,4.0,0.0,5
-machine_learning,machine learning,4.0,0.0,5
-formal_logic,formal logic,4.0,0.0,5
-high_school_biology,high school biology,4.0,0.0,5
-anatomy,anatomy,4.0,0.0,5
-clinical_knowledge,clinical knowledge,4.0,0.0,5
