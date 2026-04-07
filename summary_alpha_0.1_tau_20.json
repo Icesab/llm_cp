@@ -1,0 +1,124 @@
+{
+  "alpha": 0.1,
+  "inf_qhat_rate": 1.0,
+  "mean_effective_calibration_size": 3.0,
+  "num_trials": 5,
+  "per_subject": {
+    "anatomy": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 4.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "anatomy"
+    },
+    "clinical_knowledge": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 2.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "clinical knowledge"
+    },
+    "college_computer_science": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 3.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "college computer science"
+    },
+    "computer_security": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 3.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "computer security"
+    },
+    "formal_logic": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 3.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "formal logic"
+    },
+    "high_school_biology": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 4.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "high school biology"
+    },
+    "high_school_computer_science": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 2.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "high school computer science"
+    },
+    "machine_learning": {
+      "coverage_mean": 1.0,
+      "coverage_std": 0.0,
+      "inf_qhat_rate": 1.0,
+      "mean_effective_calibration_size": 3.0,
+      "record_count": 5,
+      "set_size_mean": 4.0,
+      "set_size_std": 0.0,
+      "subject_name": "machine learning"
+    }
+  },
+  "seed": 0,
+  "subjects": [
+    {
+      "subject_id": "computer_security",
+      "subject_name": "computer security"
+    },
+    {
+      "subject_id": "high_school_computer_science",
+      "subject_name": "high school computer science"
+    },
+    {
+      "subject_id": "college_computer_science",
+      "subject_name": "college computer science"
+    },
+    {
+      "subject_id": "machine_learning",
+      "subject_name": "machine learning"
+    },
+    {
+      "subject_id": "formal_logic",
+      "subject_name": "formal logic"
+    },
+    {
+      "subject_id": "high_school_biology",
+      "subject_name": "high school biology"
+    },
+    {
+      "subject_id": "anatomy",
+      "subject_name": "anatomy"
+    },
+    {
+      "subject_id": "clinical_knowledge",
+      "subject_name": "clinical knowledge"
+    }
+  ],
+  "tau": 20
+}
