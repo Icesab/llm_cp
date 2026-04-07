@@ -1,6 +1,6 @@
-transformers>=4.45,<4.48
+transformers>=4.49,<4.50
 accelerate>=0.34,<0.35
-bitsandbytes>=0.43,<0.46
+bitsandbytes==0.43.3
 datasets>=2.20,<3.0
 sentencepiece>=0.2,<0.3
 numpy>=1.26,<2

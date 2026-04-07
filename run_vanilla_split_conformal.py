@@ -95,6 +95,7 @@ def calibrate_lac(scores, targets, alpha: float = 0.1, return_dist: bool = False
 
     score_dist = torch.take_along_dim(1 - scores, targets.unsqueeze(1), 1).flatten()
     quantile_level = torch.ceil((n + 1) * (1 - alpha)) / n
+    quantile_level = torch.clamp(quantile_level, min=0.0, max=1.0)
     assert 0 <= quantile_level <= 1, f"{alpha=} {n=} {quantile_level=}"
     qhat = torch.quantile(score_dist, quantile_level, interpolation="higher")
     return (qhat, score_dist) if return_dist else qhat
@@ -162,6 +163,8 @@ def load_datasets(input_dir: Path, subject_ids: List[str]):
             raise ValueError(
                 f"Question count mismatch for {subject_id}: scores={scores.shape}, targets={targets.shape}"
             )
+        if not np.isfinite(scores).all():
+            raise ValueError(f"{scores_path} contains non-finite values.")
 
         datasets[display_name(subject_id)] = {
             "subject_id": subject_id,
@@ -216,14 +219,11 @@ def run_trials(datasets, alpha: float, num_trials: int, seed: int):
                     continue
 
                 other_psets = inference_lac(other_scores, qhat)
-                # Intentional notebook compatibility: the first encounter only
-                # initializes storage and does not append the current trial.
                 if other_name not in other_all_coverage[name]:
                     other_all_coverage[name][other_name] = []
                     other_all_size[name][other_name] = []
-                else:
-                    other_all_coverage[name][other_name].append(get_coverage(other_psets, other_targets))
-                    other_all_size[name][other_name].append(get_size(other_psets))
+                other_all_coverage[name][other_name].append(get_coverage(other_psets, other_targets))
+                other_all_size[name][other_name].append(get_size(other_psets))
 
     return {
         "all_scores": all_scores,

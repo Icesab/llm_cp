@@ -227,6 +227,10 @@ def load_datasets(input_dir: Path, subject_ids: List[str]):
             raise ValueError(
                 f"Question count mismatch for {subject_id}: scores={scores.shape}, targets={targets.shape}"
             )
+        if not np.isfinite(scores).all():
+            raise ValueError(f"{scores_path} contains non-finite values.")
+        if not np.isfinite(gates).all():
+            raise ValueError(f"{gates_path} contains non-finite values.")
 
         scores_mean = scores.mean(axis=0).astype(np.float32)
         gates_mean = gates.mean(axis=0).astype(np.float32)
